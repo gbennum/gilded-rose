@@ -1,0 +1,9 @@
+<div class="component-list">Hello from the {{ componentName }}!</div>
+<br>
+<div *ngFor="let item of inventory; let i = index">
+    <span>Name: {{ item.name }}</span> 
+    <span class="right-span">Quality: {{ item.quality.toString() ? item.quality : "N/A"}}</span> 
+    <span class="middle-span">Sell In: {{ item.sellIn.toString() ? item.sellIn : "N/A" }}</span> 
+</div>
+<div class="inventory-button" (click)="populate()">Populate</div>
+<div class="inventory-button" (click)="increment()">Increment</div>
