@@ -34,6 +34,9 @@ export class InventoryComponent {
   
   increment() {
   	for (var i = 0; i < this.inventory.length; i++) {
+      if (this.inventory[i].quality === '') {
+        return;
+      }
   		var item = this.inventory[i]
   		if (item.sellIn !== 0 && item.name !== 'Sulfarus the Legendary Sword') {
   			item.sellIn -= 1;
